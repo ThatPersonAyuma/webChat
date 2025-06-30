@@ -12,6 +12,27 @@
     </script>
   </head>
   <body class="bg-white">
-    {@inner_content}
+  <h1>Chat Group</h1>
+  <div class="chat-container">
+  <div class="chat-header">Group Chat</div>
+  <div class="chat-messages" id="message-box">
+    <div class="message message-in">
+      <div class="bubble">Hello!</div>
+    </div>
+    <div class="message message-out">
+      <div class="bubble">Hi there 😄</div>
+    </div>
+  </div>
+  <form id="input-form">
+    <div class="name-input">
+      <input  id="username" type="text" placeholder="Type name..." />
+    </div>
+    <div class="chat-input">
+      <input id="user-message" type="text" placeholder="Type a message..." />
+      <button type="submit" id="sendButton" disabled>Send</button>
+    </div>
+  </form>
+</div>
+  <h1>Hello World</h1>
   </body>
 </html>

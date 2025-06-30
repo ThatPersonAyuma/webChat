@@ -1,5 +1,130 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+:root {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --primary: #1d4ed8;
+  --bubble-in: #e5e7eb;
+  --bubble-out: #dbeafe;
+  --border: #ccc;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+.chat-header {
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #f1f5f9;
+}
+
+.message {
+  display: flex;
+}
+
+.message-in {
+  justify-content: flex-start;
+}
+
+.message-out {
+  justify-content: flex-end;
+}
+
+.bubble {
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  max-width: 75%;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.message-in .bubble {
+  background: var(--bubble-in);
+  color: #111;
+}
+
+.message-out .bubble {
+  background: var(--bubble-out);
+  color: #111;
+}
+
+.chat-input {
+  display: flex;
+  padding: 0.75rem;
+  border-top: 1px solid var(--border);
+  background: #fff;
+  gap: 0.5rem;
+}
+
+.name-input {
+  display: flex;
+  padding: 0.75rem;
+  border-top: 1px solid var(--border);
+  background: #fff;
+  gap: 0.5rem;
+}
+
+.name-input input{
+  flex: 0.5;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  outline: none;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  outline: none;
+}
+
+.chat-input button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: #1e40af;
+}
+
+.chat-input button:disabled {
+    background: #a3c0f9;
+    cursor: default;
+  }
 
 /* This file is for your main application CSS */
